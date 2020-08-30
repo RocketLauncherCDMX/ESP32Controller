@@ -4,7 +4,8 @@
 #ifndef _ESPCONTROLLER_CPP_
 #define _ESPCONTROLLER_CPP_
 
-Adafruit_NeoPixel dot(1, 18, NEO_GRB + NEO_KHZ800);  // 1 neopixel en pin18
+rmt_data_t led_data[24];
+rmt_obj_t* rmt_send = NULL;
 
 bool flag = 1;
 
@@ -21,10 +22,6 @@ void ESPController :: begin() {
   digitalWrite(RESET, HIGH);
   
   Wire.begin();
-
-  dot.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
-  dot.show();            // Turn OFF all pixels ASAP
-  dot.setBrightness(255); // Set BRIGHTNESS to about 1/5 (max = 255)
 
   //
   for (uint8_t thisReading = 0; thisReading < NUM_READINGS; thisReading++) {
@@ -56,6 +53,29 @@ void ESPController :: begin() {
   leftJoyV_centre = 4095 - (leftJoyV_total / NUM_READINGS);
   rightJoyH_centre = rightJoyH_total / NUM_READINGS;
   rightJoyV_centre = rightJoyV_total / NUM_READINGS;
+
+  Player(NO_PLAYER);
+
+  Circle.name = "circle";
+  Square.name = "square";
+  Triangle.name = "triangle";
+  Cross.name = "cross";
+  Up.name = "up";
+  Down.name = "down";
+  Left.name = "left";
+  Right.name = "right";
+  Select.name = "select";
+  Start.name = "start";
+  Ps.name = "ps";
+  R1.name = "r1";
+  R2.name = "r2";
+  L1.name = "l1";
+  L2.name = "l2";
+  JoyLeft.name = "joystick left";
+  JoyRight.name = "joystick right";
+
+  rmt_send = rmtInit(18, true, RMT_MEM_64);
+  rmtSetTick(rmt_send, 100);
 };
 
 void ESPController :: readAxisRaw() {
@@ -114,7 +134,7 @@ uint8_t ESPController :: readRegister(uint8_t address) {
   Wire.requestFrom(address, 1);
   //wait for response
   while(Wire.available() == 0);
-  //put the temperature in variable c
+  //put the byte in variable c
   int c = Wire.read();   
   return c;
 }
@@ -123,65 +143,281 @@ void ESPController :: getButtons() {
   buttonsGroup1   = readRegister(ADDRESS1);
   buttonsGroup2   = readRegister(ADDRESS2);
 
-  buttonR1        = (buttonsGroup1 & 0b10000000) >> 7;
-  buttonCircle    = (buttonsGroup1 & 0b01000000) >> 6;
-  buttonSquare    = (buttonsGroup1 & 0b00100000) >> 5;
-  buttonStart     = (buttonsGroup1 & 0b00010000) >> 4;
-  buttonPs        = !((buttonsGroup1 & 0b00001000) >> 3);
-  buttonDown      = !((buttonsGroup1 & 0b00000100) >> 2);
-  buttonUp        = !((buttonsGroup1 & 0b00000010) >> 1);
-  buttonL2        = !((buttonsGroup1 & 0b00000001) >> 0);
+  // Register 1
+  R1.newStatus        = (buttonsGroup1 & 0b10000000) >> 7;
+  Circle.newStatus    = (buttonsGroup1 & 0b01000000) >> 6;
+  Square.newStatus    = (buttonsGroup1 & 0b00100000) >> 5;
+  Start.newStatus     = (buttonsGroup1 & 0b00010000) >> 4;
+  Ps.newStatus        = !((buttonsGroup1 & 0b00001000) >> 3);
+  Down.newStatus      = !((buttonsGroup1 & 0b00000100) >> 2);
+  Up.newStatus        = !((buttonsGroup1 & 0b00000010) >> 1);
+  L2.newStatus        = !((buttonsGroup1 & 0b00000001) >> 0);
 
-  buttonR2        = (buttonsGroup2 & 0b01000000) >> 6;
-  buttonTriangle  = (buttonsGroup2 & 0b00100000) >> 5;
-  buttonCross     = (buttonsGroup2 & 0b00010000) >> 4;
-  buttonSelect    = !((buttonsGroup2 & 0b00001000) >> 3);
-  buttonRight     = !((buttonsGroup2 & 0b00000100) >> 2);
-  buttonLeft      = !((buttonsGroup2 & 0b00000010) >> 1);
-  buttonL1        = !((buttonsGroup2 & 0b00000001) >> 0);
+  // Register 2
+  R2.newStatus        = (buttonsGroup2 & 0b01000000) >> 6;
+  Triangle.newStatus  = (buttonsGroup2 & 0b00100000) >> 5;
+  Cross.newStatus     = (buttonsGroup2 & 0b00010000) >> 4;
+  Select.newStatus    = !((buttonsGroup2 & 0b00001000) >> 3);
+  Right.newStatus     = !((buttonsGroup2 & 0b00000100) >> 2);
+  Left.newStatus      = !((buttonsGroup2 & 0b00000010) >> 1);
+  L1 .newStatus       = !((buttonsGroup2 & 0b00000001) >> 0);
 
-  buttonCircle_new = buttonCircle;
-  if(buttonCircle_new == LOW && buttonCircle_old == HIGH) buttonCircle_released = true;
-  else if(buttonCircle_new == HIGH && buttonCircle_old == LOW) buttonCircle_pressed = true;
-  buttonCircle_old = buttonCircle_new;
+  JoyLeft.newStatus   = !digitalRead(PUSH_LEFT);
+  JoyRight.newStatus   = !digitalRead(PUSH_RIGHT);
 
-  buttonSquare_new = buttonSquare;
-  if(buttonSquare_new == LOW && buttonSquare_old == HIGH) buttonSquare_released = true;
-  else if(buttonSquare_new == HIGH && buttonSquare_old == LOW) buttonSquare_pressed = true;
-  buttonSquare_old = buttonSquare_new;
+  if(Circle.newStatus == PRESSED && Circle.oldStatus == RELEASED) { Circle.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Circle.newStatus == RELEASED && Circle.oldStatus == PRESSED) { Circle.status = RELEASED; buttonChanged = true; }
+  else if(Circle.newStatus == PRESSED && Circle.oldStatus == PRESSED) Circle.status = HOLD_PRESSED;
+  else if(Circle.newStatus == RELEASED && Circle.oldStatus == RELEASED) Circle.status = HOLD_RELEASED;
+  Circle.oldStatus = Circle.newStatus;
 
-  
+  if(Square.newStatus == PRESSED && Square.oldStatus == RELEASED) { Square.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Square.newStatus == RELEASED && Square.oldStatus == PRESSED) { Square.status = RELEASED; buttonChanged = true; }
+  else if(Square.newStatus == PRESSED && Square.oldStatus == PRESSED) Square.status = HOLD_PRESSED;
+  else if(Square.newStatus == RELEASED && Square.oldStatus == RELEASED) Square.status = HOLD_RELEASED;
+  Square.oldStatus = Square.newStatus;
+
+  if(Triangle.newStatus == PRESSED && Triangle.oldStatus == RELEASED) { Triangle.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Triangle.newStatus == RELEASED && Triangle.oldStatus == PRESSED) { Triangle.status = RELEASED; buttonChanged = true; }
+  else if(Triangle.newStatus == PRESSED && Triangle.oldStatus == PRESSED) Triangle.status = HOLD_PRESSED;
+  else if(Triangle.newStatus == RELEASED && Triangle.oldStatus == RELEASED) Triangle.status = HOLD_RELEASED;
+  Triangle.oldStatus = Triangle.newStatus;
+
+  if(Cross.newStatus == PRESSED && Cross.oldStatus == RELEASED) { Cross.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Cross.newStatus == RELEASED && Cross.oldStatus == PRESSED) { Cross.status = RELEASED; buttonChanged = true; }
+  else if(Cross.newStatus == PRESSED && Cross.oldStatus == PRESSED) Cross.status = HOLD_PRESSED;
+  else if(Cross.newStatus == RELEASED && Cross.oldStatus == RELEASED) Cross.status = HOLD_RELEASED;
+  Cross.oldStatus = Cross.newStatus;
+
+  if(Up.newStatus == PRESSED && Up.oldStatus == RELEASED) { Up.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Up.newStatus == RELEASED && Up.oldStatus == PRESSED) { Up.status = RELEASED; buttonChanged = true; }
+  else if(Up.newStatus == PRESSED && Up.oldStatus == PRESSED) Up.status = HOLD_PRESSED;
+  else if(Up.newStatus == RELEASED && Up.oldStatus == RELEASED) Up.status = HOLD_RELEASED;
+  Up.oldStatus = Up.newStatus;
+
+  if(Down.newStatus == PRESSED && Down.oldStatus == RELEASED) { Down.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Down.newStatus == RELEASED && Down.oldStatus == PRESSED) { Down.status = RELEASED; buttonChanged = true; }
+  else if(Down.newStatus == PRESSED && Down.oldStatus == PRESSED) Down.status = HOLD_PRESSED;
+  else if(Down.newStatus == RELEASED && Down.oldStatus == RELEASED) Down.status = HOLD_RELEASED;
+  Down.oldStatus = Down.newStatus;
+
+  if(Left.newStatus == PRESSED && Left.oldStatus == RELEASED) { Left.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Left.newStatus == RELEASED && Left.oldStatus == PRESSED) { Left.status = RELEASED; buttonChanged = true; }
+  else if(Left.newStatus == PRESSED && Left.oldStatus == PRESSED) Left.status = HOLD_PRESSED;
+  else if(Left.newStatus == RELEASED && Left.oldStatus == RELEASED) Left.status = HOLD_RELEASED;
+  Left.oldStatus = Left.newStatus;
+
+  if(Right.newStatus == PRESSED && Right.oldStatus == RELEASED) { Right.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Right.newStatus == RELEASED && Right.oldStatus == PRESSED) { Right.status = RELEASED; buttonChanged = true; }
+  else if(Right.newStatus == PRESSED && Right.oldStatus == PRESSED) Right.status = HOLD_PRESSED;
+  else if(Right.newStatus == RELEASED && Right.oldStatus == RELEASED) Right.status = HOLD_RELEASED;
+  Right.oldStatus = Right.newStatus;  
+
+  if(Select.newStatus == PRESSED && Select.oldStatus == RELEASED) { Select.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Select.newStatus == RELEASED && Select.oldStatus == PRESSED) { Select.status = RELEASED; buttonChanged = true; }
+  else if(Select.newStatus == PRESSED && Select.oldStatus == PRESSED) Select.status = HOLD_PRESSED;
+  else if(Select.newStatus == RELEASED && Select.oldStatus == RELEASED) Select.status = HOLD_RELEASED;
+  Select.oldStatus = Select.newStatus;
+
+  if(Start.newStatus == PRESSED && Start.oldStatus == RELEASED) { Start.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Start.newStatus == RELEASED && Start.oldStatus == PRESSED) { Start.status = RELEASED; buttonChanged = true; }
+  else if(Start.newStatus == PRESSED && Start.oldStatus == PRESSED) Start.status = HOLD_PRESSED;
+  else if(Start.newStatus == RELEASED && Start.oldStatus == RELEASED) Start.status = HOLD_RELEASED;
+  Start.oldStatus = Start.newStatus;
+
+  if(Ps.newStatus == PRESSED && Ps.oldStatus == RELEASED) { Ps.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(Ps.newStatus == RELEASED && Ps.oldStatus == PRESSED) { Ps.status = RELEASED; buttonChanged = true; }
+  else if(Ps.newStatus == PRESSED && Ps.oldStatus == PRESSED) Ps.status = HOLD_PRESSED;
+  else if(Ps.newStatus == RELEASED && Ps.oldStatus == RELEASED) Ps.status = HOLD_RELEASED;
+  Ps.oldStatus = Right.newStatus;  
+
+  if(L1.newStatus == PRESSED && L1.oldStatus == RELEASED) { L1.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(L1.newStatus == RELEASED && L1.oldStatus == PRESSED) { L1.status = RELEASED; buttonChanged = true; }
+  else if(L1.newStatus == PRESSED && L1.oldStatus == PRESSED) L1.status = HOLD_PRESSED;
+  else if(L1.newStatus == RELEASED && L1.oldStatus == RELEASED) L1.status = HOLD_RELEASED;
+  L1.oldStatus = L1.newStatus;
+
+  if(L2.newStatus == PRESSED && L2.oldStatus == RELEASED) { L2.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(L2.newStatus == RELEASED && L2.oldStatus == PRESSED) { L2.status = RELEASED; buttonChanged = true; } 
+  else if(L2.newStatus == PRESSED && L2.oldStatus == PRESSED) L2.status = HOLD_PRESSED;
+  else if(L2.newStatus == RELEASED && L2.oldStatus == RELEASED) L2.status = HOLD_RELEASED;
+  L2.oldStatus = L2.newStatus;
+
+  if(R1.newStatus == PRESSED && R1.oldStatus == RELEASED) { R1.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(R1.newStatus == RELEASED && R1.oldStatus == PRESSED) { R1.status = RELEASED; buttonChanged = true; }
+  else if(R1.newStatus == PRESSED && R1.oldStatus == PRESSED) R1.status = HOLD_PRESSED;
+  else if(R1.newStatus == RELEASED && R1.oldStatus == RELEASED) R1.status = HOLD_RELEASED;
+  R1.oldStatus = R1.newStatus;
+
+  if(R2.newStatus == PRESSED && R2.oldStatus == RELEASED) { R2.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(R2.newStatus == RELEASED && R2.oldStatus == PRESSED) { R2.status = RELEASED; buttonChanged = true; }
+  else if(R2.newStatus == PRESSED && R2.oldStatus == PRESSED) R2.status = HOLD_PRESSED;
+  else if(R2.newStatus == RELEASED && R2.oldStatus == RELEASED) R2.status = HOLD_RELEASED;
+  R2.oldStatus = R2.newStatus;
+
+  if(JoyLeft.newStatus == PRESSED && JoyLeft.oldStatus == RELEASED) { JoyLeft.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(JoyLeft.newStatus == RELEASED && JoyLeft.oldStatus == PRESSED) { JoyLeft.status = RELEASED; buttonChanged = true; }
+  else if(JoyLeft.newStatus == PRESSED && JoyLeft.oldStatus == PRESSED) JoyLeft.status = HOLD_PRESSED;
+  else if(JoyLeft.newStatus == RELEASED && JoyLeft.oldStatus == RELEASED) JoyLeft.status = HOLD_RELEASED;
+  JoyLeft.oldStatus = JoyLeft.newStatus;
+
+  if(JoyRight.newStatus == PRESSED && JoyRight.oldStatus == RELEASED) { JoyRight.status = PRESSED; buttonChanged = true; buttonPressed = true; }
+  else if(JoyRight.newStatus == RELEASED && JoyRight.oldStatus == PRESSED) { JoyRight.status = RELEASED; buttonChanged = true; }
+  else if(JoyRight.newStatus == PRESSED && JoyRight.oldStatus == PRESSED) JoyRight.status = HOLD_PRESSED;
+  else if(JoyRight.newStatus == RELEASED && JoyRight.oldStatus == RELEASED) JoyRight.status = HOLD_RELEASED;
+  JoyRight.oldStatus = JoyRight.newStatus;
 };
 
-boolean ESPController :: buttonReleased(uint8_t button) {
-  switch(button) {
-    case CIRCLE:
-      if(buttonCircle_released == true) { buttonCircle_released = false; return(true); }
-      else return(false);
+void ESPController :: vibrate(boolean strengh, uint16_t time) {
+  if(strengh == WEAK) {
+    digitalWrite(MOTOR_WEAK, HIGH);
+    delay(time);
+    digitalWrite(MOTOR_WEAK, LOW);
+    delay(time);
+  }
+  else if(strengh == STRONG) {
+    digitalWrite(MOTOR_STRONG, HIGH);
+    delay(time);
+    digitalWrite(MOTOR_STRONG, LOW);
+    delay(time);
+  }
+}
+
+void ESPController :: Player(uint8_t player) {
+  switch(player) {
+    case NO_PLAYER:
+      digitalWrite(LED1, LOW);
+      digitalWrite(LED2, LOW);
+      digitalWrite(LED3, LOW);
+      digitalWrite(LED4, LOW);
+      player = NO_PLAYER;
       break;
-    case SQUARE:
-      if(buttonSquare_released == true) { buttonSquare_released = false; return(true); }
-      else return(false);
+    case 1:
+      digitalWrite(LED1, HIGH);
+      digitalWrite(LED2, LOW);
+      digitalWrite(LED3, LOW);
+      digitalWrite(LED4, LOW);
+      player = PLAYER1;
       break;
-    default:
+    case 2:
+      digitalWrite(LED1, LOW);
+      digitalWrite(LED2, HIGH);
+      digitalWrite(LED3, LOW);
+      digitalWrite(LED4, LOW);
+      player = PLAYER2;
+      break;
+    case 3:
+      digitalWrite(LED1, LOW);
+      digitalWrite(LED2, LOW);
+      digitalWrite(LED3, HIGH);
+      digitalWrite(LED4, LOW);
+      player = PLAYER3;
+      break;
+    case 4:
+      digitalWrite(LED1, LOW);
+      digitalWrite(LED2, LOW);
+      digitalWrite(LED3, LOW);
+      digitalWrite(LED4, HIGH);
+      player = PLAYER4;
       break;
   }
 }
 
-boolean ESPController :: buttonPressed(uint8_t button) {
-  switch(button) {
-    case CIRCLE:
-      if(buttonCircle_pressed == true) { buttonCircle_pressed = false; return(true); }
-      else return(false);
-      break;
-    case SQUARE:
-      if(buttonSquare_pressed == true) { buttonSquare_pressed = false; return(true); }
-      else return(false);
-      break;
-    
-    default:
-      break;
+void ESPController :: pixel :: color(uint8_t red, uint8_t green, uint8_t blue) {
+  value[0] = green;
+  value[1] = red;
+  value[2] = blue;
+  i=0;
+
+  for (col=0; col<3; col++ ) {
+    for (bit=0; bit<8; bit++){
+      if ( (value[col] & (1<<(7-bit)))) {
+        led_data[i].level0 = 1;
+        led_data[i].duration0 = 8;
+        led_data[i].level1 = 0;
+        led_data[i].duration1 = 4;
+      } else {
+        led_data[i].level0 = 1;
+        led_data[i].duration0 = 4;
+        led_data[i].level1 = 0;
+        led_data[i].duration1 = 8;
+      }
+      i++;
+    }
   }
+  // Send the data
+  rmtWrite(rmt_send, led_data, 24);
+}
+
+void ESPController :: pixel :: color(uint8_t colorName) {
+  switch(colorName) {
+    case OFF:       color(0,0,0);        break;
+    case RED:       color(255,0,0);      break;
+    case GREEN:     color(0,255,0);      break;
+    case BLUE:      color(0,0,255);      break;
+    case YELLOW:    color(255,255,0);    break;
+    case CYAN:      color(0,255,255);    break;
+    case MAGENTA:   color(255,0,255);    break;
+    case WHITE:     color(255,255,255);  break;
+  }
+}
+
+void ESPController :: pixel :: fadeInOut(uint8_t colorName, uint8_t speed) {
+  for(int i=0; i<=255; i++) {
+    switch(colorName) {
+      case RED:     color(i,0,0); break;
+      case GREEN:   color(0,i,0); break;
+      case BLUE:    color(0,0,i); break;
+      case YELLOW:  color(i,i,0); break;
+      case CYAN:    color(0,i,i); break;
+      case MAGENTA: color(i,0,i); break;
+      case WHITE:   color(i,i,i); break;
+    }
+    delay(speed);
+  }
+  for(int i=255; i>=0; i--) {
+    switch(colorName) {
+      case RED:     color(i,0,0); break;
+      case GREEN:   color(0,i,0); break;
+      case BLUE:    color(0,0,i); break;
+      case YELLOW:  color(i,i,0); break;
+      case CYAN:    color(0,i,i); break;
+      case MAGENTA: color(i,0,i); break;
+      case WHITE:   color(i,i,i); break;
+    }
+    delay(speed);
+  }
+}
+
+void ESPController :: pixel :: fadeInOut(uint8_t colorName) {
+  for(int i=0; i<=255; i++) {
+    switch(colorName) {
+      case RED:     color(i,0,0); break;
+      case GREEN:   color(0,i,0); break;
+      case BLUE:    color(0,0,i); break;
+      case YELLOW:  color(i,i,0); break;
+      case CYAN:    color(0,i,i); break;
+      case MAGENTA: color(i,0,i); break;
+      case WHITE:   color(i,i,i); break;
+    }
+    delay(1);
+  }
+  for(int i=255; i>=0; i--) {
+    switch(colorName) {
+      case RED:     color(i,0,0); break;
+      case GREEN:   color(0,i,0); break;
+      case BLUE:    color(0,0,i); break;
+      case YELLOW:  color(i,i,0); break;
+      case CYAN:    color(0,i,i); break;
+      case MAGENTA: color(i,0,i); break;
+      case WHITE:   color(i,i,i); break;
+    }
+    delay(1);
+  }
+}
+
+void ESPController :: pixel :: off() {
+  color(0,0,0);
 }
 
 #endif

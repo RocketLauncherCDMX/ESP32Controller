@@ -2,7 +2,6 @@
 #define _ESPCONTROLLER_H_
 
 #include <Arduino.h>
-#include <Adafruit_NeoPixel.h>
 #include <Wire.h>
 
 // ----------------------------------------------------------------------------------------------------
@@ -42,10 +41,34 @@ public:
   #define PRESSED       1
   #define HOLD_RELEASED 2
   #define HOLD_PRESSED  3
+
+  #define NO_PLAYER     0
+  #define PLAYER1       1
+  #define PLAYER2       2
+  #define PLAYER3       3
+  #define PLAYER4       4
   
   #define NONE          0
   #define CIRCLE        1
   #define SQUARE        2
+  #define TRIANGLE      3
+  #define CROSS         4
+  #define UP            5
+  #define DOWN          6
+  #define LEFT          7
+  #define RIGHT         8
+
+  #define WEAK          0
+  #define STRONG        1
+
+  #define OFF           0
+  #define RED           1
+  #define GREEN         2
+  #define BLUE          3
+  #define YELLOW        4
+  #define CYAN          5
+  #define MAGENTA       6
+  #define WHITE         7
 
   #define NUM_READINGS  5
   // Global public  constants
@@ -62,17 +85,24 @@ public:
   #define LED3          32
   #define LED4          33
   
-  struct buttons {
-    uint8_t Circle = HOLD_RELEASED;
-    
-  };
+  class button {
+  public:
+    String name;
+    uint8_t status = HOLD_RELEASED;
+    boolean newStatus = RELEASED;
+    boolean oldStatus = RELEASED;
+  } Circle, Square, Triangle, Cross, Up, Down, Left, Right, Select, Start, Ps, L1, L2, R1, R2, JoyLeft, JoyRight;
+
+  boolean buttonChanged = false, :1;
+  boolean buttonPressed = false, :1;
+
+  uint8_t player = NO_PLAYER;
 
   uint16_t leftJoyH_centre = 0;
   uint16_t leftJoyV_centre = 0;
   uint16_t rightJoyH_centre = 0;
   uint16_t rightJoyV_centre = 0;
 
-  // Global private variables
   uint8_t readIndex = 0;
   uint16_t leftJoyH_readings[NUM_READINGS];   
   uint32_t leftJoyH_total = 0; 
@@ -88,28 +118,28 @@ public:
   uint32_t rightJoyV_total = 0; 
   int16_t rightJoyV = 0;
 
-  bool buttonUp = LOW,        :1;
-  bool buttonDown = LOW,      :1;      
-  bool buttonLeft = LOW,      :1;  
-  bool buttonRight = LOW,     :1;     
-  bool buttonSelect = LOW,    :1;   
-  bool buttonStart = LOW,     :1;     
-  bool buttonPs = LOW,        :1;       
-  bool buttonTriangle = LOW,  :1;  
-  bool buttonCross = LOW,     :1;     
-  bool buttonSquare = LOW,    :1;    
-  bool buttonCircle = LOW,    :1;    
-  bool buttonL1 = LOW,        :1;     
-  bool buttonL2 = LOW,        :1;       
-  bool buttonR1 = LOW,        :1;       
-  bool buttonR2 = LOW,        :1;      
-  
   void begin();
   void readAxisRaw();
   void readAxisSign();
   void getButtons();
-  boolean buttonReleased(uint8_t);
-  boolean buttonPressed(uint8_t);
+  void vibrate(boolean, uint16_t);
+  void Player(uint8_t);
+
+  class pixel {
+  private:
+    uint8_t value[3];  // GRB value
+    uint8_t col, bit;
+    uint8_t i;
+  public:
+    void color(uint8_t,uint8_t,uint8_t);
+    void color(uint8_t);
+    void fadeInOut(uint8_t, uint8_t);
+    void fadeInOut(uint8_t);
+    void off(void);
+
+  } Neopixel;
+
+  
 };
 
 #endif
