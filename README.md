@@ -42,13 +42,13 @@ El ESP32 Controller tiene todas las funciones de un control de PS3 común:
 
 ---
 
-Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fábrica. Para encenderlo, basta con presionar brevemente el botón **PS**. Si el control tiene batería, entonces un LED azul se encenderá justo debajo del botón, indicando que se el control se encuentra encendido. Si no enciende, entonces, muy posiblemente, necesite recargarse. Basta con conectarlo con su cable USB C a cualquier puerto capaz de suministrar 500mA y este comenzará a cargar. Un LED rojo indica que se encuentra en proceso de carga y un LED verde indica una carga completa.
+Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fábrica. Para encenderlo, basta con presionar brevemente el botón central **P3**. Si el control tiene batería, entonces un LED azul se encenderá justo debajo del botón, indicando que se el control se encuentra encendido. Si no enciende, entonces, muy posiblemente, necesite recargarse. Basta con conectarlo con su cable USB C a cualquier puerto capaz de suministrar 500mA y este comenzará a cargar. Un LED rojo indica que se encuentra en proceso de carga y un LED verde indica una carga completa.
 
-🟦 Control encendido
-
-🟥 Cargando
-
+🟦 Control encendido <br>
+🟥 Cargando <br>
 🟩 Carga completa
+
+##IMPORTANTE: El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
 
 
 
