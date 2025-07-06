@@ -16,7 +16,7 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 
 # Proyecto de Prueba
 
-Hola, este es un ejemplo de , *cursiva*, y una imagen centrada:
+Hola, este es un ejemplo de , *cursiva*, **NEGRITA** y una imagen centrada:
 
 <p align="center">
   <img src="https://placekitten.com/300/300" alt="Gatito" width="200">
