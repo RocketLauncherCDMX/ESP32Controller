@@ -56,6 +56,10 @@ Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fá
 
 El control viene con un programa de ejemplo, el cual consiste en un enlace bluetooth. Lo primero para probarlo es descargar la app **nRF Connect**
 
-![nrfConnectWelcomeScreen](https://github.com/user-attachments/assets/1be6b070-9348-46a1-b09f-a3cc2b4537c1)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1be6b070-9348-46a1-b09f-a3cc2b4537c1" alt="nrf connet"/>
+</p>
 
+Puedes descargarlo para iOS en este enlace: https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med
+Y para Android en este otro: https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403
 
