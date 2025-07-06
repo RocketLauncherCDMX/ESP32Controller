@@ -4,7 +4,7 @@
 </p>
 <br>
 
-Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32** **negrita** un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
+Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**, un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
 
 <br><br>
 
@@ -40,6 +40,13 @@ El ESP32 Controller tiene todas las funciones de un control de PS3 común:
 - Acelerómetro de 3 ejes
 - 4 Colores a elegir: Azul, Rojo, Verde y Amarillo
 
+---
 
-Todo lo anterior totalmente programable en Arduino.
+Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fábrica. Para encenderlo, basta con presionar brevemente el botón **PS**. Si el control tiene batería, entonces un LED azul se encenderá justo debajo del botón, indicando que se el control se encuentra encendido. Si no enciende, entonces, muy posiblemente, necesite recargarse. Basta con conectarlo con su cable USB C a cualquier puerto capaz de suministrar 500mA y este comenzará a cargar. Un LED rojo indica que se encuentra en proceso de carga y un LED verde indica una carga completa.
+
+- LED Azul  -> Control encendido
+- LED Rojo  -> Cargando
+- LED Verde -> Carga completa
+
+  
 
