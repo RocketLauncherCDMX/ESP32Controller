@@ -3,9 +3,13 @@
   <img src="https://github.com/user-attachments/assets/5c2477c7-2137-42b6-b296-f14735b3a114" alt="PS3 ESP32 Controller" width="1020"/>
 </p>
 <br>
+
 Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32** **negrita** un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
+
 <br><br>
+
 ---
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9720bd97-8cd2-47d6-af0b-7525baae9c0e" alt="ESP32 Controller PCB" width="800"/>
 </p>
@@ -16,11 +20,11 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 
 # Proyecto de Prueba
 
-Hola, este es un ejemplo de , *cursiva*, **NEGRITA** y una imagen centrada:
-
 <p align="center">
   <img src="https://placekitten.com/300/300" alt="Gatito" width="200">
 </p>
+
+---
 
 Además tendrás la opción de ocuparlo de forma más tradicional, por medio de Bluetooth 4.1, con un consumo de corriente muy bajo y un alcance optimo (15 metros) o Wifi Direct, el cual es un protocolo de comunicación propietario de Expressif para conectar dispositivos punto a punto (sin la necesidad de un router) por medio de Wifi.
 
