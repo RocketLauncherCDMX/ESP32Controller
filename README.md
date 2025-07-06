@@ -48,5 +48,9 @@ Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fá
 - LED Rojo  -> Cargando
 - LED Verde -> Carga completa
 
+<div style="background-color:#f0f0f0; border:1px solid #ccc; padding:10px; border-radius:6px;">
+  <strong>Este es un cuadro gris claro con borde.</strong><br>
+  Puedes usarlo para advertencias, notas o secciones destacadas.
+</div>
   
 
