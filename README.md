@@ -5,7 +5,6 @@
 <br>
 Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**, un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
 
-![ESP32_controller_025]()
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d342d7eb-7b37-4a61-b077-2deb4196f1a5" alt="ESP32 Controller PCB" width="800"/>
 </p>
