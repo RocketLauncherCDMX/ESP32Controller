@@ -3,7 +3,7 @@
   <img src="https://github.com/user-attachments/assets/5c2477c7-2137-42b6-b296-f14735b3a114" alt="PS3 ESP32 Controller" width="1020"/>
 </p>
 <br>
-Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32** un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
+Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32** **negrita** un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
 <br><br>
 ---
 <p align="center">
@@ -16,7 +16,7 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 
 # Proyecto de Prueba
 
-Hola, este es un ejemplo de **negrita**, *cursiva*, y una imagen centrada:
+Hola, este es un ejemplo de , *cursiva*, y una imagen centrada:
 
 <p align="center">
   <img src="https://placekitten.com/300/300" alt="Gatito" width="200">
