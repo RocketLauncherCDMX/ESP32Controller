@@ -48,7 +48,7 @@ Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fá
 🟥 Cargando <br>
 🟩 Carga completa
 
-! **IMPORTANTE:** El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
+⚠️ **IMPORTANTE:** El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
 
 
 
