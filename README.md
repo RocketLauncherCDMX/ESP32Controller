@@ -61,5 +61,6 @@ El control viene con un programa de ejemplo, el cual consiste en un enlace bluet
 </p>
 
 Puedes descargarlo para iOS en este enlace: https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med
+
 Y para Android en este otro: https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403
 
