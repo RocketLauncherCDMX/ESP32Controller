@@ -1,9 +1,14 @@
 # ESP32Controller
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5c2477c7-2137-42b6-b296-f14735b3a114" alt="Texto alternativo" width="1020"/>
+  <img src="https://github.com/user-attachments/assets/5c2477c7-2137-42b6-b296-f14735b3a114" alt="PS3 ESP32 Controller" width="1020"/>
 </p>
 <br>
 Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**, un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
+
+![ESP32_controller_025]()
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d342d7eb-7b37-4a61-b077-2deb4196f1a5" alt="ESP32 Controller PCB" width="800"/>
+</p>
 
 Además tendrás la opción de ocuparlo de forma más tradicional, por medio de Bluetooth 4.1, con un consumo de corriente muy bajo y un alcance optimo (15 metros) o Wifi Direct, el cual es un protocolo de comunicación propietario de Expressif para conectar dispositivos punto a punto (sin la necesidad de un router) por medio de Wifi.
 
@@ -25,5 +30,6 @@ El ESP32 Controller tiene todas las funciones de un control de PS3 común:
 - Acelerómetro de 3 ejes
 - 4 Colores a elegir: Azul, Rojo, Verde y Amarillo
 
-Todo lo anterior totalmente programable en Arduino. Al comprar el producto se incluye acceso a las librerias.
+
+Todo lo anterior totalmente programable en Arduino.
 
