@@ -18,12 +18,6 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
   <img src="https://github.com/user-attachments/assets/211f2dc1-2802-448b-9f14-bb10e4ce374c" alt="ESP32 Controller PCB" width="800"/>
 </p>
 
-# Proyecto de Prueba
-
-<p align="center">
-  <img src="https://placekitten.com/300/300" alt="Gatito" width="200">
-</p>
-
 ---
 
 Además tendrás la opción de ocuparlo de forma más tradicional, por medio de Bluetooth 4.1, con un consumo de corriente muy bajo y un alcance optimo (15 metros) o Wifi Direct, el cual es un protocolo de comunicación propietario de Expressif para conectar dispositivos punto a punto (sin la necesidad de un router) por medio de Wifi.
