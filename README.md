@@ -50,5 +50,12 @@ Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fá
 
 ⚠️ **IMPORTANTE:** El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
 
+---
+
+## Primeros pasos
+
+El control viene con un programa de ejemplo, el cual consiste en un enlace bluetooth. Lo primero para probarlo es descargar la app **nRF Connect**
+
+![nrfConnectWelcomeScreen](https://github.com/user-attachments/assets/1be6b070-9348-46a1-b09f-a3cc2b4537c1)
 
 
