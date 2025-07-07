@@ -120,3 +120,9 @@ En el Bluetooth Low Energy (BLE) Un **servicio** corresponde a una conexión act
   - UUID ........................... 26a8  →  Botón Presionado
   - UUID ........................... 0e4f  →  Valor de los Joysticks analógicos
   - UUID ........................... 8520  →  Valor de la posición del control (acelerómetro)
+
+<br>
+
+Al hacer click en el ícono de las 3 flechas, se activarán las notificaciones, con lo que obtendremos la actualización de cada característica en tiempo real. Si no activamos las notificaciones, entonces podemos hacer click en el ícono de 1 flecha, el cual es para leer ese valor manualmente.
+
+![nrfNotifications](https://github.com/user-attachments/assets/19eb1f8d-8486-4bea-b230-bafaf90f3d37)
