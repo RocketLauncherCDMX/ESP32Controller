@@ -1,6 +1,6 @@
 # ESP32Controller
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5c2477c7-2137-42b6-b296-f14735b3a114" alt="PS3 ESP32 Controller" width="1020"/>
+  <img src="https://github.com/user-attachments/assets/5c2477c7-2137-42b6-b296-f14735b3a114" alt="PS3 ESP32 Controller" width="800"/>
 </p>
 <br>
 
