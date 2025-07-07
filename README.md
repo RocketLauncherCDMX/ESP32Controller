@@ -164,8 +164,10 @@ Como verás no tenemos acceso los botones **P3** ni **SELECT** ya que estos son 
 
 <br>
 
+---
+
 ```bash
-- UUID ........................... 0e4f  →  Muestra el valor de cada Joystick en hexadecimal, uno junto al otro
+UUID ........................... 0e4f  →  Muestra el valor de cada Joystick en hexadecimal, uno junto al otro
 ```
 | VALOR            | IZQ-X | IZQ-Y | DER-X | DER_Y |
 |------------------|-------|-------|-------|-------|
@@ -173,4 +175,30 @@ Como verás no tenemos acceso los botones **P3** ni **SELECT** ya que estos son 
 
 Cada que cualquiera de los 2 ejes de ambos Joysticks cambia de valor, se unen en un solo mensaje y se manda una notificación con los 4 valores, esto evita ralentizar el bus mandando todo el tiempo los valores.
 
-- UUID ........................... 8520  →  Valor de la posición del control (acelerómetro)
+---
+
+```bash
+UUID ........................... 8520  →  Muestra un par de valores correspondientes al ángulo de inclinación del control y su dirección
+```
+
+<br>
+
+Esta característica es la responsable de capturar las notificaciones que envía el sensor deinclinación del control cuando la posición cambia.
+
+Para simplicidad de la lectura del sensor de inclinación, el ángulo solo se reporta en niveles del 0 al 10, junto con la dirección a la que se está inclinando el control. Tenemos las siguientes direcciones de inclinación posibles:
+
+| MOVIMIENTO | CARACTER |
+|------------|----------| 
+| Reposo     | ' '      |
+| Adelante   | 'U'      |
+| Atrás      | 'D'      |
+| Izquierda  | 'L'      |
+| Derecha    | 'R'      |
+
+Cada caracter va acompañado de un valor (0 - 10), que indica qué tanto se ladeó el control en esa dirección, abarcando 90°, por ejemplo:
+
+```bash
+44-05
+44 → 0x44 = ASCII 68 = D
+05 → 0x05 = aproximadamente 50°
+```
