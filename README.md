@@ -102,19 +102,18 @@ Al presionar el botón **CONNECT** La pantalla mostrará el link con el control.
 
 <br>
 
-Al hacer click sobre este servicio, se expandirá, mostrando 3 característica.
+Al hacer click sobre este servicio, se expandirá, mostrando 3 características.
 
 <br>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c3f2cbb9-2925-45bf-b53e-1d1bf7025767" alt="BLE characteristics" width="400"/>
+  <img src="https://github.com/user-attachments/assets/57b2ecea-a7b6-46bd-bcd4-a0ce6a7b96fc" alt="BLE characteristics" width="400"/>
 </p>
 
 <br>
 
 En el Bluetooth Low Energy (BLE) una característica puede representar un valor, como por ejemplo, el nivel de batería, un sensor, un estado. En este ejemplo, cada característica contiene la siguiente información:
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/57b2ecea-a7b6-46bd-bcd4-a0ce6a7b96fc" alt="nRF connect BLE devices" width="400"/>
-</p>
-
+### UUID ...........................26a8 → Botón Presionado
+### UUID ...........................0e4f → Valor de los Joysticks analógicos
+### UUID ...........................8520 → Valor de la posición del control (acelerómetro)
