@@ -114,6 +114,6 @@ Al hacer click sobre este servicio, se expandirá, mostrando 3 características.
 
 En el Bluetooth Low Energy (BLE) una característica puede representar un valor, como por ejemplo, el nivel de batería, un sensor, un estado. En este ejemplo, cada característica contiene la siguiente información:
 
-### UUID ...........................26a8 → Botón Presionado
-### UUID ...........................0e4f → Valor de los Joysticks analógicos
-### UUID ...........................8520 → Valor de la posición del control (acelerómetro)
+### UUID ........................... 26a8  →  Botón Presionado
+### UUID ........................... 0e4f  →  Valor de los Joysticks analógicos
+### UUID ........................... 8520  →  Valor de la posición del control (acelerómetro)
