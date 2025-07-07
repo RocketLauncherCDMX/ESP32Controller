@@ -140,6 +140,8 @@ Si activamos las 3 notificaciones, entonces estaremos recibiendo los valores del
 - UUID ........................... 26a8  → Muestra un caracter correspondiente al último botón que se presiono.
   Este ejemplo solamente puede registrar un solo botón presionado cada vez, pero se puede modificar para reportar todos los botones y si se presionaron o se dejaron de presionar. La lista de botones y su caracter se muestra a continuación:
 
+| Botón | Caracter|
+-------------------
 | Arriba | 'U' |
 | Abajo |'D' |
 | Izquierda | 'L' |
