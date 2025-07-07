@@ -136,7 +136,7 @@ Al hacer click en el ícono de las 3 flechas, se activarán las notificaciones (
 
 <br>
 
-Si activamos las 3 notificaciones, entonces estaremos recibiendo los valores del botón presionado, el valor de ambos Joysticks y el valor de la inclinación del control. Esta información está codificada de la siguiente forma:
+Si activamos las 3 notificaciones, entonces estaremos recibiendo los valores del botón presionado, el valor de ambos Joysticks y el valor de la inclinación del control. Por ejemplo, activando la notificación de los botones, bastará con presionar cualquier botón para ver este valor cambiar. Esta información está codificada de la siguiente forma:
 
 ```bash
 UUID ........................... 26a8  → Muestra un caracter correspondiente al último botón que se presiono.
