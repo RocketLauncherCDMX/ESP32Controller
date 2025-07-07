@@ -71,11 +71,11 @@ Y para iOS en este otro:
 https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403
 ```
 
----
-
 Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control se encuentra encendido, verás uno de los 4 LEDs de jugador parpadeando, lo que significa que el bluetooth está activo pero sin conectar. Dependiendo del número de LED que se encuentre parpadeando, será el nombre del control que aparecerá en la app.
 
 <p align="center">
   <br><br>
   <img src="https://github.com/user-attachments/assets/1083788d-de9f-4b1b-bd6f-c369303a95d5" alt="PS3 ESP32 Controller leds" width="600"/>
 </p>
+
+![tablaDeJugadorLed](https://github.com/user-attachments/assets/267e0e03-79d1-40d8-81ea-29d4a8332505)
