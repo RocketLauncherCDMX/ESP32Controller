@@ -75,5 +75,5 @@ Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control
 
 <p align="center">
   <br><br>
-  <img src="https://github.com/user-attachments/assets/d3d0c82b-38ff-4782-9942-044a2a03a408" alt="PS3 ESP32 Controller leds"/>
+  <img src="https://github.com/user-attachments/assets/ee1ef0f2-a10e-42d5-9d33-4e02bddd33d4" alt="PS3 ESP32 Controller leds"/>
 </p>
