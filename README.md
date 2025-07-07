@@ -133,3 +133,20 @@ Al hacer click en el ícono de las 3 flechas, se activarán las notificaciones (
 
 ![characteristicNotify](https://github.com/user-attachments/assets/6ed58703-0472-4a37-8265-85db173c113e)
 
+<br>
+
+Si activamos las 3 notificaciones, entonces estaremos recibiendo los valores del botón presionado, el valor de ambos Joysticks y el valor de la inclinación del control. Esta información está codificada de la siguiente forma:
+
+- UUID ........................... 26a8  → Muestra un caracter correspondiente al último botón que se presiono.
+  Este ejemplo solamente puede registrar un solo botón presionado cada vez, pero se puede modificar para reportar todos los botones y si se presionaron o se dejaron de presionar. La lista de botones y su caracter se muestra a continuación:
+
+| Arriba | 'U' |
+| Abajo |'D' |
+| Izquierda | 'L' |
+| Derecha | 'R' |
+| Círculo |
+
+
+
+- UUID ........................... 0e4f  →  Valor de los Joysticks analógicos
+- UUID ........................... 8520  →  Valor de la posición del control (acelerómetro)
