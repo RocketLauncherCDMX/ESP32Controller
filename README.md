@@ -124,8 +124,8 @@ En el Bluetooth Low Energy (BLE) Un **servicio** corresponde a una conexión act
 <br>
 
 Al hacer click en el ícono de las 3 flechas, se activarán las notificaciones (flechas tachadas), con lo que obtendremos la actualización de cada característica en tiempo real. Si no activamos las notificaciones (flechas normales), entonces podemos hacer click en el ícono de 1 flecha, el cual es para leer ese valor manualmente.
-
+<br>
 ![nrfNotifications](https://github.com/user-attachments/assets/19eb1f8d-8486-4bea-b230-bafaf90f3d37)
-
+<br>
 ![characteristicNotify](https://github.com/user-attachments/assets/6ed58703-0472-4a37-8265-85db173c113e)
 
