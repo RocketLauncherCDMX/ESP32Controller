@@ -215,7 +215,9 @@ Llegados a este punto, te preguntarás cómo utilizar el control con alguno de t
 
 <br>
 
-![Tuxedo18650_V1 0_switch](https://github.com/user-attachments/assets/b7f6db12-45d4-495b-bc59-f580ffabcb82)
+```bash
+https://github.com/user-attachments/assets/b7f6db12-45d4-495b-bc59-f580ffabcb82](https://github.com/RocketLauncherCDMX/Tuxedo18650
+```
 
 <br>
 
