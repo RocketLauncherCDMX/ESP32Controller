@@ -216,7 +216,7 @@ Llegados a este punto, te preguntarás cómo utilizar el control con alguno de t
 <br>
 
 ```bash
-https://github.com/user-attachments/assets/b7f6db12-45d4-495b-bc59-f580ffabcb82](https://github.com/RocketLauncherCDMX/Tuxedo18650
+https://github.com/RocketLauncherCDMX/Tuxedo18650
 ```
 
 <br>
