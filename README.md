@@ -160,6 +160,17 @@ UUID ........................... 26a8  → Muestra un caracter correspondiente a
 | R3                | '6'          |
 | Start             | 'S'          |
 
+Como verás no tenemos acceso los botones **P3** ni **SELECT** ya que estos son parte de funciones propias del control.
 
-- UUID ........................... 0e4f  →  Valor de los Joysticks analógicos
+<br>
+
+```bash
+- UUID ........................... 0e4f  →  Muestra el valor de cada Joystick en hexadecimal, uno junto al otro
+```
+| VALOR            | IZQ-X | IZQ-Y | DER-X | DER_Y |
+|------------------|-------|-------|-------|-------|
+| B5-81-7F-36      | B5    | 81    | 7F    | 36    |
+
+Cada que cualquiera de los 2 ejes de ambos Joysticks cambia de valor, se unen en un solo mensaje y se manda una notificación con los 4 valores, esto evita ralentizar el bus mandando todo el tiempo los valores.
+
 - UUID ........................... 8520  →  Valor de la posición del control (acelerómetro)
