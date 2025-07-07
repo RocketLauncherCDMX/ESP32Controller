@@ -77,3 +77,9 @@ Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control
   <br><br>
   <img src="https://github.com/user-attachments/assets/ee1ef0f2-a10e-42d5-9d33-4e02bddd33d4" alt="PS3 ESP32 Controller leds"/>
 </p>
+
+Entre tu y tus amigos podrán utilizar hasta 4 diferentes controles cada uno vinculado a un dispositivo, sin embargo, fácilmente se puede extender a 16 haciendo un par de cambios en el código. Para cambiar de Jugador (1 a 4) basta con presionar el botón **SELECT**. El control cambiará de nombre y se reiniciará, con lo que ahora aparecerá otro nombre y parpadeará otro LED.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/69736aff-ba09-486d-8477-57ee0e92c435" alt="nRF connect BLE devices" width="400"/>
+</p>
