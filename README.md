@@ -119,7 +119,7 @@ En el Bluetooth Low Energy (BLE) Un **servicio** corresponde a una conexión act
 
 <br>
 
-&ensp;###**Características**
+"\t" ###**Características**
 &ensp;### UUID ........................... 26a8  →  Botón Presionado
 &ensp;### UUID ........................... 0e4f  →  Valor de los Joysticks analógicos
 &ensp;### UUID ........................... 8520  →  Valor de la posición del control (acelerómetro)
