@@ -62,8 +62,12 @@ El control viene con un programa de ejemplo, el cual consiste en un enlace bluet
 
 Puedes descargarlo para iOS en este enlace:
 <br>
+
 ```bash https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med ```
 
 Y para Android en este otro: 
+
+<br>
+
 ```bash https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403```
 
