@@ -49,6 +49,9 @@ Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fá
 🟩 Carga completa
 
 ⚠️ **IMPORTANTE 1:** El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
+
+<br>
+
 ⚠️ **IMPORTANTE 2:** Mientras el dispositivo se encuentre apagado, la conectividad USB será detectada normalmente, sin embargo, para programar y utilizar la consola Serial, es necesario encender el control.
 
 ---
