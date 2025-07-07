@@ -142,23 +142,23 @@ UUID ........................... 26a8  → Muestra un caracter correspondiente a
 ```
   Este ejemplo solamente puede registrar un solo botón presionado cada vez, pero se puede modificar para reportar todos los botones y si se presionaron o se dejaron de presionar. La lista de botones y su caracter se muestra a continuación:
 
-| Botón         | Caracter |
-|---------------|----------|
-| Arriba        | 'U'      |
-| Abajo         | 'D'      |
-| Izquierda     | 'L'      |
-| Derecha       | 'R'      |
-| Círculo       | 'C'      |
-| Cuadrado      | 'Q'      |
-| Triángulo     | 'T'      |
-| Equis (X)     | 'X'      |
-| L1            | '1'      |
-| L2            | '2'      |
-| L3            | '3'      |
-| R1            | '4'      |
-| R2            | '5'      |
-| R3            | '6'      |
-| Start         | 'S'      |
+| BOTON             | CARACTER     |
+|-------------------|--------------|
+| Arriba            | 'U'          |
+| Abajo             | 'D'          |
+| Izquierda         | 'L'          |
+| Derecha           | 'R'          |
+| Círculo           | 'C'          |
+| Cuadrado          | 'Q'          |
+| Triángulo         | 'T'          |
+| Equis (X)         | 'X'          |
+| L1                | '1'          |
+| L2                | '2'          |
+| L3                | '3'          |
+| R1                | '4'          |
+| R2                | '5'          |
+| R3                | '6'          |
+| Start             | 'S'          |
 
 
 - UUID ........................... 0e4f  →  Valor de los Joysticks analógicos
