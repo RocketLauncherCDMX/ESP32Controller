@@ -212,6 +212,12 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 Llegados a este punto, te preguntarás cómo utilizar el control con alguno de tus proyectos, así que a continuación te dejamos el enlace al código de arduino de un ejemplo de aplicación del control, esto para una placa basada en un controlador ESP32, por ejemplo, puede utilizar la placa Tuxedo.
 
+<br>
+
+![Tuxedo18650_V1 0_switch](https://github.com/user-attachments/assets/b7f6db12-45d4-495b-bc59-f580ffabcb82)
+
+<br>
+
 ```bash
 
 ```
