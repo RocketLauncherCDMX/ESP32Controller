@@ -11,11 +11,11 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 ---
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9720bd97-8cd2-47d6-af0b-7525baae9c0e" alt="ESP32 Controller PCB" width="800"/>
+  <img src="https://github.com/user-attachments/assets/9720bd97-8cd2-47d6-af0b-7525baae9c0e" alt="ESP32 Controller PCB" width="600"/>
 </p>
 <br>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/211f2dc1-2802-448b-9f14-bb10e4ce374c" alt="ESP32 Controller PCB" width="800"/>
+  <img src="https://github.com/user-attachments/assets/211f2dc1-2802-448b-9f14-bb10e4ce374c" alt="ESP32 Controller PCB" width="600"/>
 </p>
 
 ---
