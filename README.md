@@ -48,7 +48,8 @@ Al sacarlo de su empaque, notarás que es exáctamente igual a un control de fá
 🟥 Cargando <br>
 🟩 Carga completa
 
-⚠️ **IMPORTANTE:** El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
+⚠️ **IMPORTANTE 1:** El botón **P3** no se puede programar, ya que su única función es encender/apagar el dispositivo.
+⚠️ **IMPORTANTE 2:** Mientras el dispositivo se encuentre apagado, la conectividad USB será detectada normalmente, sin embargo, para programar y utilizar la consola Serial, es necesario encender el control.
 
 ---
 
@@ -60,13 +61,19 @@ El control viene con un programa de ejemplo, el cual consiste en un enlace bluet
   <img src="https://github.com/user-attachments/assets/1be6b070-9348-46a1-b09f-a3cc2b4537c1" alt="nrf connet"/>
 </p>
 
-Puedes descargarlo para iOS en este enlace:    
+Puedes descargarlo para Android en este enlace:    
 ```bash 
 https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med
 ```
 
-Y para Android en este otro:
+Y para iOS en este otro:
 ```bash 
 https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403
 ```
 
+---
+
+Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control se encuentra encendido, verás uno de los 4 LEDs de jugador parpadeando, lo que significa que el bluetooth está activo pero sin conectar. Dependiendo del número de LED que se encuentre parpadeando, será el nombre del control que aparecerá en la app.
+
+
+![Artboard 1](https://github.com/user-attachments/assets/1083788d-de9f-4b1b-bd6f-c369303a95d5)
