@@ -195,10 +195,23 @@ Para simplicidad de la lectura del sensor de inclinación, el ángulo solo se re
 | Izquierda  | 'L'      |
 | Derecha    | 'R'      |
 
+Cuando el Control está en reposo, reporta un espacio en blanco.
 Cada caracter va acompañado de un valor (0 - 10), que indica qué tanto se ladeó el control en esa dirección, abarcando 90°, por ejemplo:
 
 ```bash
 44-05
-44 → 0x44 = ASCII 68 = D
+44 → 0x44 = ASCII 68 = D (ATRÄS)
 05 → 0x05 = aproximadamente 50°
+```
+
+De esta forma puedes utilizar toda esta información para controlar cualquier dispositivo.
+
+---
+
+## Código de ejemplo para un dispositivo basado en ESP32
+
+Llegados a este punto, te preguntarás cómo utilizar el control con alguno de tus proyectos, así que a continuación te dejamos el enlace al código de arduino de un ejemplo de aplicación del control, esto para una placa basada en un controlador ESP32, por ejemplo, puede utilizar la placa Tuxedo.
+
+```bash
+
 ```
