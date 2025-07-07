@@ -82,7 +82,7 @@ Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control
 <br>
 <br>
 
-Entre tu y tus amigos podrán utilizar hasta 4 diferentes controles cada uno vinculado a un dispositivo, sin embargo, fácilmente se puede extender a 16 haciendo un par de cambios en el código. Para cambiar de Jugador (1 a 4) basta con presionar el botón **SELECT**. El control cambiará de nombre y se reiniciará, con lo que ahora aparecerá otro nombre y parpadeará otro LED.
+Entre tu y tus amigos podrán utilizar hasta 4 diferentes controles, cada uno vinculado a un dispositivo, sin embargo, fácilmente se puede extender a 16 haciendo un par de cambios en el código. Para cambiar de Jugador (1 a 4) basta con presionar el botón **SELECT**. El control cambiará de nombre y se reiniciará, con lo que ahora aparecerá otro nombre y parpadeará otro LED.
 
 <br>
 <br>
@@ -93,7 +93,7 @@ Entre tu y tus amigos podrán utilizar hasta 4 diferentes controles cada uno vin
 
 <br>
 
-Al presionar el botón **CONNECT** La pantalla mostrará el link con el control. Aparecerá un Atributo y un Acceso genericos, además de un Servicio desconocido. Este último corresponde a nuestro control.
+Al conectar el control con la app, presionando el botón **CONNECT**, el LED del Jugador del control se mantendrá encendido y la pantalla mostrará el link con el control. Aparecerá un Atributo y un Acceso genericos, además de un Servicio desconocido. Este último corresponde a nuestro control.
 
 <br>
 
