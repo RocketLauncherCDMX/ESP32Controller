@@ -8,12 +8,11 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 
 ---
 
-
-## En el siguiente enlace encontrarás la **libreria oficial** en formato zip:
+```
+En el siguiente enlace encontrarás la **libreria oficial** en formato zip:
 
 https://github.com/RocketLauncherCDMX/ESP32Controller/releases/download/v1.0.0/ESP32Controller.zip
-
-<br><br>
+```
 
 ---
 
