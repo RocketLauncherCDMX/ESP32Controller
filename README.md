@@ -8,12 +8,6 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 
 ---
 
-En el siguiente enlace encontrarás la **libreria oficial** en formato zip:
-
-https://github.com/RocketLauncherCDMX/ESP32Controller/releases/download/v1.0.0/ESP32Controller.zip
-
----
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9720bd97-8cd2-47d6-af0b-7525baae9c0e" alt="ESP32 Controller PCB" width="600"/>
 </p>
@@ -43,6 +37,18 @@ El ESP32 Controller tiene todas las funciones de un control de PS3 común:
 - Bluetooth 4.2
 - Acelerómetro de 3 ejes
 - 4 Colores a elegir: Azul, Rojo, Verde y Amarillo
+
+---
+
+<br>
+
+## En el siguiente enlace encontrarás la **libreria oficial** en formato zip:
+
+<br>
+
+https://github.com/RocketLauncherCDMX/ESP32Controller/releases/download/v1.0.0/ESP32Controller.zip
+
+<br>
 
 ---
 
