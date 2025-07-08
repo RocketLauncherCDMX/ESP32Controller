@@ -167,7 +167,7 @@ Como verás no tenemos acceso los botones **P3** ni **SELECT** ya que estos son 
 
 ---
 
-```bash
+```
 UUID ........................... 0e4f  →  Muestra el valor de cada Joystick en hexadecimal, uno junto al otro
 ```
 | VALOR            | IZQ-X | IZQ-Y | DER-X | DER_Y |
@@ -178,7 +178,7 @@ Cada que cualquiera de los 2 ejes de ambos Joysticks cambia de valor, se unen en
 
 ---
 
-```bash
+```
 UUID ........................... 8520  →  Muestra un par de valores correspondientes al ángulo de inclinación del control y su dirección
 ```
 
@@ -199,7 +199,7 @@ Para simplicidad de la lectura del sensor de inclinación, el ángulo solo se re
 Cuando el Control está en reposo, reporta un espacio en blanco.
 Cada caracter va acompañado de un valor (0 - 10), que indica qué tanto se ladeó el control en esa dirección, abarcando 90°, por ejemplo:
 
-```bash
+```
 44-05
 44 → 0x44 = ASCII 68 = D (ATRAS)
 05 → 0x05 = aproximadamente 50°
@@ -211,7 +211,7 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
-Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** que viene incluido en la carpeta `examples/BLE_Receiver` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
+Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
 
 
 
