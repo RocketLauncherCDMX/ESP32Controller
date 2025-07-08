@@ -63,7 +63,7 @@ El control viene con un programa de ejemplo, el cual consiste en un enlace bluet
 </p>
 
 Puedes descargarlo para Android en este enlace:    
-```bash 
+```
 https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med
 ```
 
