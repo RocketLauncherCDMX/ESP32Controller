@@ -239,13 +239,15 @@ Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te e
  
 ![IconoSubirArduino](https://github.com/user-attachments/assets/81d5b43a-a09b-44b0-a910-9aed038b6055)
 
-6. Después de unos minutos de compilar el código, el programa comenzará a subirse y estarás listo para probar el nuevo programa. Abre la consola Serial para que veas lo que el control está haciendo. En la esquina superior derecha encontrarás el ícono (una lupa).
-
-![monitorSerial](https://github.com/user-attachments/assets/8ee90f7f-91f9-4460-9598-5bff69639f09)
+6. Después de unos minutos de compilar el código, el programa comenzará a subirse y estarás listo para probar el nuevo programa. 
 
 7. En el menú **Herramientas/Puerto** selecciona el puerto que haya aparecido. Usualmente es diferente de COM1.
 
 ![portCOM](https://github.com/user-attachments/assets/8e99586a-9cc5-4caa-af16-0b27a452d319)
+
+8. Abre la consola Serial para que veas lo que el control está haciendo. En la esquina superior derecha encontrarás el ícono (una lupa).
+
+![monitorSerial](https://github.com/user-attachments/assets/8ee90f7f-91f9-4460-9598-5bff69639f09)
 
 9. Asegúrate de que la velocidad Serial se encuentre a 115200 Baudios.
 
