@@ -219,9 +219,9 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 <br>
 
-## Modificar el código del ESP32 Controller
+## Reprogramando el ESP32 Controller
 
-Si nunca antes has programado, no te preocupes, en el siguiente enlace encontrarás los primeros pasos para descargar Arduino, la plataforma de programación de microcontroladores:
+Si nunca antes has programado un microcontrolador, no te preocupes, en el siguiente enlace encontrarás los primeros pasos para descargar Arduino, la plataforma favorita de programación de microcontroladores:
 
 [Instalar Arduino](https://github.com/RocketLauncherCDMX/ArduinoInstall/blob/main/README.md)
 
