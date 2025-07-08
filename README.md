@@ -217,6 +217,8 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 ---
 
+<br>
+
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
 Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
