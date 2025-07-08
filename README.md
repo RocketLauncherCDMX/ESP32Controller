@@ -8,7 +8,7 @@ Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**
 
 En el siguiente enlace encontrarás la libreria en formato zip:
 
-https://github.com/RocketLauncherCDMX/ESP32Controller/blob/ff3c3836bff114ef9fb2b29cea38369cb551f87b/ESP32Controller.zip
+https://github.com/RocketLauncherCDMX/ESP32Controller/releases/download/v1.0.0/ESP32Controller.zip
 
 <br><br>
 
@@ -216,8 +216,6 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
 Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
-
-
 
 
 
