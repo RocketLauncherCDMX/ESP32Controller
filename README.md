@@ -63,14 +63,14 @@ El control viene con un programa de ejemplo, el cual consiste en un enlace bluet
 </p>
 
 Puedes descargarlo para Android en este enlace:    
-```bash 
+
 https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med
-```
+
 
 Y para iOS en este otro:
-```bash 
+
 https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403
-```
+
 
 Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control se encuentra encendido, verás uno de los 4 LEDs de jugador parpadeando, lo que significa que el bluetooth está activo pero sin conectar. Dependiendo del número de LED que se encuentre parpadeando, será el nombre del control que aparecerá en la app.
 
@@ -201,7 +201,7 @@ Cada caracter va acompañado de un valor (0 - 10), que indica qué tanto se lade
 
 ```bash
 44-05
-44 → 0x44 = ASCII 68 = D (ATRÄS)
+44 → 0x44 = ASCII 68 = D (ATRAS)
 05 → 0x05 = aproximadamente 50°
 ```
 
@@ -209,102 +209,9 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 ---
 
-## Código de ejemplo para un dispositivo basado en ESP32
+## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
-Llegados a este punto, te preguntarás cómo utilizar el control con alguno de tus proyectos, así que a continuación te dejamos el enlace al código de arduino de un ejemplo de aplicación del control, esto para una placa basada en un controlador ESP32, por ejemplo, puede utilizar la placa Tuxedo.
-
-<br>
-
-```bash
-https://github.com/RocketLauncherCDMX/Tuxedo18650
-```
-
-<br>
-
----
-
-## Ejemplo rápido – Usar tu **ESP32 Controller** con otro ESP32 vía BLE
-
-Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** incluido en la carpeta `examples/BLE_Receiver`.
-
-| Característica | Detalle |
-| :------------- | :------ |
-| **Conexión**   | Automática al mando cuyo nombre sea **ESP32 Controller 1–4** |
-| **Datos**      | Recibe botones, 4 ejes de joysticks y la inclinación (dirección + nivel) |
-| **Hooks**      | Funciones listas para editar: `onButton…()`, `onJoystickLeft()`, `onJoystickRight()`, `onInclination()` |
-| **Depuración** | Muestra en una sola línea tabulada: `LX LY RX RY lastBtn dir-lvl` |
-
-### 1 · Instalar librerías y abrir el ejemplo
-
-1. En **Arduino IDE** instala la librería **ESP32 BLE Arduino** (última 3.x).  
-2. Selecciona tu placa (p. ej. *ESP32 Dev Module*) y el puerto correcto.  
-3. Clona este repositorio y abre:  
-
-examples/BLE_Receiver/ESP32_BLE_Receiver.ino
-
-csharp
-Copiar
-Editar
-
-### 2 · Configurar el nombre del mando
-
-En el sketch verás:
-
-```cpp
-const char CONTROLLER_NAME[] = "ESP32 Controller 1";
-Cámbialo a “2”, “3” o “4” si tu mando parpadea otro LED de jugador.
-
-3 · Añadir tu lógica (fácil)
-Los puntos de entrada son estas funciones vacías:
-
-cpp
-Copiar
-Editar
-// BOTONES
-void onButtonCircle() { digitalWrite(LED_BUILTIN, HIGH); }   // ejemplo
-
-// JOYSTICK IZQUIERDO
-void onJoystickLeft(int8_t x, int8_t y) {
-  int brillo = map(x, -128, 127, 0, 255);   // -128…127 → 0…255
-  analogWrite(LED_PIN, brillo);
-}
-
-// INCLINACIÓN
-void onInclination(char dir, uint8_t level) {
-  if (dir == 'U' && level > 7) {             // muy inclinado hacia delante
-    // haz algo…
-  }
-}
-ℹ️ Tip: Si no quieres ver la salida por consola, comenta la línea printLog(); dentro de cada callback BLE.
-
-4 · Subir y probar
-Sube el sketch a tu placa ESP32.
-
-Enciende el mando con P3; su LED parpadeará hasta conectar.
-
-Abre el Monitor Serie a 115 200 baud.
-
-Verás algo similar a:
-
-css
-Copiar
-Editar
-Conectando a 3C:71:BF:12:34:56
-  Conexión y notificaciones OK
-0    0    0    0    -    --0
-Mueve los joysticks o pulsa botones: los números se actualizarán en tiempo real.
-Ahora solo queda llenar los hooks con tu código para motores, servos, luces o lo que imagines.
-
-markdown
-Copiar
-Editar
-
-> **Cómo integrarlo:**  
-> 1. Copia TODO el bloque (incluye las líneas `---` superior e inferior).  
-> 2. Pégalo justo al final de tu README.  
-> 3. Sube también la carpeta `examples/BLE_Receiver/` con el sketch **ESP32_BLE_Receiver.ino** para que los usuarios lo encuentren fácilmente.
-
-
+Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** que viene incluido en la carpeta `examples/BLE_Receiver` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
 
 
 
