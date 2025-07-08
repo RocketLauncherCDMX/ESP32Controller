@@ -256,7 +256,17 @@ Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y
 
 Si deseas cambiarle el código al control, lo cual es su punto fuerte, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
 
-Cargar nuevo código es muy sencillo. Con la biblioteca instalada, deberás abrir uno de los ejemplos o escribir tu propio código, tener instalado el core del ESP32 de Expressif. Las instrucciones para hacerlo las puedes encontrar en el siguiente enlace:
+Cargar nuevo código es muy sencillo.
+
+1. Iremos al menú **Herramientas/Placa/ESP32 Arduino** y seleccionaremos **ESP32 Dev Module** como placa.
+
+</p> 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/02c159c3-9b49-479e-9af8-11ccad509869" alt="Tuxedo 18650 caracteristicas" width="720"/>
+</p>
+
+2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción 
+
 
 
 
