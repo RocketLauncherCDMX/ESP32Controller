@@ -253,7 +253,7 @@ Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te e
 
 ![SerialBaudios](https://github.com/user-attachments/assets/131a6af1-53f7-4f57-8ee0-fbe5beb17c76)
 
-¡Eso es todo! Ahora puedes presionar los botones, mover los Joysticks e inclinar tu control y ver las lecturas que arroja.
+Antes de cambiar el código te invitamos a explorar los mensajes que manda el control, puedes presionar los botones, mover los Joysticks e inclinar tu control y ver las lecturas que arroja.
 
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
