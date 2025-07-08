@@ -6,6 +6,10 @@
 
 Este es un Control tipo PS3, pero con una tarjeta basada en el popular **ESP32**, un microcontrolador de 32 bits muy potente, capaz de conectarse por **Bluetooth y Wifi**, además tiene 4MB de flash, lo que es ideal para cargarle programas grandes, como páginas web e incluso imágenes, ¿para qué? para poder hacer tus propias interfaces Web y controlar tus proyectos por medio de peticiones http, https o web sockets.
 
+En el siguiente enlace encontrarás la libreria en formato zip:
+
+https://github.com/RocketLauncherCDMX/ESP32Controller/blob/ff3c3836bff114ef9fb2b29cea38369cb551f87b/ESP32Controller.zip
+
 <br><br>
 
 ---
