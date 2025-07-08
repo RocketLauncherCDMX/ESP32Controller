@@ -246,15 +246,13 @@ Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca d
 
 <br>
 
-Si deseas reprogramar el control (lo cual es su punto fuerte), en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
-
-Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te enseñarán lo básico sobre cómo se utiliza..
+Ahora ya tienes acceso a los archivos de ejemplo de la libreria configuraremos el control:
 
 1. Iremos al menú **Herramientas/Placa/ESP32 Arduino** y seleccionaremos **ESP32 Dev Module** como placa.
 
 ![Artboard 12](https://github.com/user-attachments/assets/53b1fae0-6968-4452-887a-c9ea696c2288)
 
-2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas.
+2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas. Aquí encontrarás todos los ejemplos, los cuales te enseñarán lo básico sobre cómo se utiliza, por ejemplo, cómo leer botones, Joysticks, activar vibradores (rumble) t manejar wifi y bluetooth.
 
 3. Selecciona el sketch de ejemplo **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32`
 
