@@ -246,7 +246,7 @@ Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca d
 
 <br>
 
-Ahora ya tienes acceso a los archivos de ejemplo de la libreria configuraremos el control:
+Ahora configuraremos el control:
 
 1. Iremos al menú **Herramientas/Placa/ESP32 Arduino** y seleccionaremos **ESP32 Dev Module** como placa.
 
