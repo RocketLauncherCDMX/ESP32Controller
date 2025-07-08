@@ -221,6 +221,8 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
 
+https://github.com/RocketLauncherCDMX/ESP32Controller/tree/master/Arduino/examples/receiver/bleReceiverESP32
 
+Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código, además, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
 
-
+¡Eso es todo! Ahora es tu turno de experimentar con el ESP32 Controller.
