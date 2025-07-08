@@ -244,30 +244,40 @@ Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca d
 
 ![image](https://github.com/user-attachments/assets/4be0fcb7-fbb9-4558-94d5-61c9b2b78743)
 
-Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te enseñarán lo básico sobre cómo se utiliza.
-
-Utiliza el sketch de ejemplo **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32` disponible al instalar la biblioteca. Los ejemplos los encontrarás en la pestaña **Archivo/Ejemplos**. También lo puedes encontrar en el siguiente enlace:
-
-Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código. 
-
 <br>
 
 ## Modificar el código del ESP32 Controller
 
 Si deseas cambiarle el código al control, lo cual es su punto fuerte, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
 
-Cargar nuevo código es muy sencillo.
+Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te enseñarán lo básico sobre cómo se utiliza..
 
 1. Iremos al menú **Herramientas/Placa/ESP32 Arduino** y seleccionaremos **ESP32 Dev Module** como placa.
 
-</p> 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/02c159c3-9b49-479e-9af8-11ccad509869" alt="Tuxedo 18650 caracteristicas"/>
-</p>
+![Artboard 12](https://github.com/user-attachments/assets/53b1fae0-6968-4452-887a-c9ea696c2288)
 
-2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción 
+2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas.
 
+3. Selecciona el sketch de ejemplo **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32`
 
+4. Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código. 
 
+5. Para cargar el nuevo código bastará con conectar el control a tu computadora, por medio del cable USB C incluido, asegurarte que se encuentra encendido (LED azul) y presionar el ícono de la flecha al frente **Subir**
+ 
+![IconoSubirArduino](https://github.com/user-attachments/assets/81d5b43a-a09b-44b0-a910-9aed038b6055)
 
-¡Eso es todo! Ahora es tu turno de experimentar con el ESP32 Controller.
+6. Después de unos minutos de compilar el código, el programa comenzará a subirse y estarás listo para probar el nuevo programa. Abre la consola Serial para que veas lo que el control está haciendo. En la esquina superior derecha encontrarás el ícono (una lupa).
+
+![monitorSerial](https://github.com/user-attachments/assets/8ee90f7f-91f9-4460-9598-5bff69639f09)
+
+7. En el menú **Herramientas/Puerto** selecciona el puerto que haya aparecido. Usualmente es diferente de COM1.
+
+![portCOM](https://github.com/user-attachments/assets/8e99586a-9cc5-4caa-af16-0b27a452d319)
+
+9. Asegúrate de que la velocidad Serial se encuentre a 115200 Baudios.
+
+![SerialBaudios](https://github.com/user-attachments/assets/131a6af1-53f7-4f57-8ee0-fbe5beb17c76)
+
+¡Eso es todo! Ahora puedes presionar los botones, mover los Joysticks e inclinar tu control y ver las lecturas que arroja.
+
+Es tu turno de experimentar con el ESP32 Controller, explora todos los ejemplos y conoce los demás productos de Rocket **Launcher**
