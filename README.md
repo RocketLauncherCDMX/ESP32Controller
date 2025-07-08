@@ -262,7 +262,7 @@ Cargar nuevo código es muy sencillo.
 
 </p> 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/02c159c3-9b49-479e-9af8-11ccad509869" alt="Tuxedo 18650 caracteristicas" width="720"/>
+  <img src="https://github.com/user-attachments/assets/02c159c3-9b49-479e-9af8-11ccad509869" alt="Tuxedo 18650 caracteristicas"/>
 </p>
 
 2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción 
