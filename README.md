@@ -225,6 +225,16 @@ Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coch
 
 https://github.com/RocketLauncherCDMX/ESP32Controller/tree/master/Arduino/examples/receiver/bleReceiverESP32
 
-Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código, además, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
+Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código. 
+
+<br>
+
+## Modificar el código del ESP32 Controller
+
+Si deseas cambiarle el código al control, lo cual es su punto fuerte, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
+
+Cargar nuevo código es muy sencillo. Con la biblioteca instalada, deberás abrir uno de los ejemplos o escribir tu propio código, tener instalado el core del ESP32 de Expressif. Las instrucciones para hacerlo las puedes encontrar en el siguiente enlace:
+
+
 
 ¡Eso es todo! Ahora es tu turno de experimentar con el ESP32 Controller.
