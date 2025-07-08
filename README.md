@@ -38,8 +38,6 @@ El ESP32 Controller tiene todas las funciones de un control de PS3 común:
 - Acelerómetro de 3 ejes
 - 4 Colores a elegir: Azul, Rojo, Verde y Amarillo
 
----
-
 <br>
 
 ## En el siguiente enlace encontrarás la **libreria oficial** en formato zip:
