@@ -223,7 +223,7 @@ https://github.com/RocketLauncherCDMX/Tuxedo18650
 
 ---
 
-## Ejemplo rápido – Usar tu **ESP32 Controller** con otro ESP32 vía BLE
+## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
 Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** incluido en la carpeta `examples/BLE_Receiver`.
 
