@@ -246,40 +246,44 @@ Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca d
 
 <br>
 
-Ahora configuraremos el control:
+Ahora configuraremos el control para poder leer sus datos por serial y reprogramarlo:
 
-1. Iremos al menú **Herramientas/Placa/ESP32 Arduino** y seleccionaremos **ESP32 Dev Module** como placa.
+1. Conectaremos el control a la computadora, por medio del cable USB C incluido. Encenderemos por medio del botón **P3**. Recuerda que debe encenderse el LED azul.
+
+2. Iremos al menú **Herramientas/Placa/ESP32 Arduino** y seleccionaremos **ESP32 Dev Module** como placa.
 
 ![Artboard 12](https://github.com/user-attachments/assets/53b1fae0-6968-4452-887a-c9ea696c2288)
 
-2. Ahora en el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas. Aquí encontrarás todos los ejemplos, los cuales te enseñarán lo básico sobre cómo se utiliza, por ejemplo, cómo leer botones, Joysticks, activar vibradores (rumble) t manejar wifi y bluetooth.
-
-3. Selecciona el sketch de ejemplo **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32`
-
-4. Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código. 
-
-5. Para cargar el nuevo código bastará con conectar el control a tu computadora, por medio del cable USB C incluido, asegurarte que se encuentra encendido (LED azul) y presionar el ícono de la flecha al frente **Subir**
- 
-![IconoSubirArduino](https://github.com/user-attachments/assets/81d5b43a-a09b-44b0-a910-9aed038b6055)
-
-6. Después de unos minutos de compilar el código, el programa comenzará a subirse y estarás listo para probar el nuevo programa. 
-
-7. En el menú **Herramientas/Puerto** selecciona el puerto que haya aparecido. Usualmente es diferente de COM1.
+3. En el menú **Herramientas/Puerto** seleccionamos el puerto que haya aparecido. Usualmente es diferente de COM1.
 
 ![portCOM](https://github.com/user-attachments/assets/8e99586a-9cc5-4caa-af16-0b27a452d319)
 
-8. Abre la consola Serial para que veas lo que el control está haciendo. En la esquina superior derecha encontrarás el ícono (una lupa).
+4. Abrimos la consola Serial para ver lo que el control está haciendo. En la esquina superior derecha encontrarás el ícono (una lupa).
 
 ![monitorSerial](https://github.com/user-attachments/assets/8ee90f7f-91f9-4460-9598-5bff69639f09)
 
-9. Asegúrate de que la velocidad Serial se encuentre a 115200 Baudios.
+5. Asegúrate de que la velocidad Serial se encuentre a 115200 Baudios.
 
 ![SerialBaudios](https://github.com/user-attachments/assets/131a6af1-53f7-4f57-8ee0-fbe5beb17c76)
 
-Antes de cambiar el código te invitamos a explorar los mensajes que manda el control, puedes presionar los botones, mover los Joysticks e inclinar tu control y ver las lecturas que arroja.
+6. Ahora ya puedes explorar los mensajes que manda el control, presiona los botones, mueve los Joysticks e inclina el control para ver las lecturas que arroja.
 
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
-Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, podrás hacerlo con Arduino.
+1. En el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas. Aquí encontrarás todos los ejemplos, los cuales te enseñarán lo básico sobre cómo se utiliza, por ejemplo, cómo leer botones, Joysticks, activar vibradores (rumble) t manejar wifi y bluetooth.
+
+2. Selecciona el sketch de ejemplo **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32`
+
+3. Toda la información sobre cómo usar este ejemplo con el ESP32 Controller tal y como viene de fábrica, lo encontrarás dentro del código. 
+
+4. Para cargar el nuevo código bastará con asegurarte que se encuentra encendido (LED azul) y presionar el ícono de la flecha al frente **Subir**. Es importante que los pasos para configurar el control ya se hayan hecho.
+ 
+![IconoSubirArduino](https://github.com/user-attachments/assets/81d5b43a-a09b-44b0-a910-9aed038b6055)
+
+5. Después de unos minutos de compilar el código, el programa comenzará a subirse y estarás listo para probar el nuevo programa.
+   
+6. Finalmente, lee con detenimiento la sección superior del programa, ahí se explica cómo interactúa con el control.
+
+---
 
 Es tu turno de experimentar con el ESP32 Controller, explora todos los ejemplos y conoce los demás productos de Rocket **Launcher**
