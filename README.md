@@ -248,7 +248,7 @@ Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca d
 
 ## Modificar el código del ESP32 Controller
 
-Si deseas cambiarle el código al control, lo cual es su punto fuerte, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
+Si deseas reprogramar el control, lo cual es su punto fuerte, en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
 
 Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te enseñarán lo básico sobre cómo se utiliza..
 
