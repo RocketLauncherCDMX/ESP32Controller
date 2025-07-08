@@ -63,14 +63,14 @@ El control viene con un programa de ejemplo, el cual consiste en un enlace bluet
 </p>
 
 Puedes descargarlo para Android en este enlace:    
-```
+
 https://play.google.com/store/search?q=nrf%20connect&c=apps&utm_source=latam_Med
-```
+
 
 Y para iOS en este otro:
-```bash 
+
 https://apps.apple.com/mx/app/nrf-connect-for-mobile/id1054362403
-```
+
 
 Al entrar en la app, veremos la lista de dispositivos disponibles. Si el control se encuentra encendido, verás uno de los 4 LEDs de jugador parpadeando, lo que significa que el bluetooth está activo pero sin conectar. Dependiendo del número de LED que se encuentre parpadeando, será el nombre del control que aparecerá en la app.
 
