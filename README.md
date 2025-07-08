@@ -221,6 +221,31 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 ## Modificar el código del ESP32 Controller
 
+Si nunca antes has programado, no te preocupes, en el siguiente enlace encontrarás los primeros pasos para descargarlo:
+
+[Instalar Arduino](https://github.com/RocketLauncherCDMX/ArduinoInstall/blob/main/README.md)
+
+Una vez instalado Arduino, deberás instalar el core del microcontrolador, el cual es un ESP32. Si nunca has instalado un core, tampoco te preocupes, te ayudaremos a hacerlo en el siguiente enlace:
+
+[Instalar el core de ESP32 para Arduino](https://github.com/RocketLauncherCDMX/expressifCoreArduinoInstall)
+
+Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca del ESP32 Controller siguiendo los siguientes pasos:
+
+1. Descarga la librería en el siguiente enlace:
+   https://github.com/RocketLauncherCDMX/ESP32Controller/tree/master/Arduino/examples/receiver/bleReceiverESP32
+   
+2. En la pestaña **Programa/Incluir Libreria** dale click a la opción **Añadir biblioteca .ZIP**
+   
+4. Selecciona el archivo que descargaste.
+
+5. Da click en Abrir.
+
+6. Espera unos segundos a que aparezca en el recuadro verde: Libreria añadida a sus librerias:
+
+![image](https://github.com/user-attachments/assets/4be0fcb7-fbb9-4558-94d5-61c9b2b78743)
+
+<br>
+
 Si deseas reprogramar el control (lo cual es su punto fuerte), en los ejemplos también encontrarás código para probar los botones, Joysticks, vibradores (rumble), wifi y ble.
 
 Ahora ya tienes acceso a los archivos de ejemplo de la libreria, los cuales te enseñarán lo básico sobre cómo se utiliza..
@@ -257,30 +282,6 @@ Antes de cambiar el código te invitamos a explorar los mensajes que manda el co
 
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
-Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, podrás hacerlo con Arduino. Si nunca antes has programado, no te preocupes, en el siguiente enlace encontrarás los primeros pasos para descargarlo:
-
-[Instalar Arduino](https://github.com/RocketLauncherCDMX/ArduinoInstall/blob/main/README.md)
-
-Una vez instalado Arduino, deberás instalar el core del microcontrolador, el cual es un ESP32. Si nunca has instalado un core, tampoco te preocupes, te ayudaremos a hacerlo en el siguiente enlace:
-
-[Instalar el core de ESP32 para Arduino](https://github.com/RocketLauncherCDMX/expressifCoreArduinoInstall)
-
-Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca del ESP32 Controller siguiendo los siguientes pasos:
-
-1. Descarga la librería en el siguiente enlace:
-   https://github.com/RocketLauncherCDMX/ESP32Controller/tree/master/Arduino/examples/receiver/bleReceiverESP32
-   
-2. En la pestaña **Programa/Incluir Libreria** dale click a la opción **Añadir biblioteca .ZIP**
-   
-4. Selecciona el archivo que descargaste.
-
-5. Da click en Abrir.
-
-6. Espera unos segundos a que aparezca en el recuadro verde: Libreria añadida a sus librerias:
-
-![image](https://github.com/user-attachments/assets/4be0fcb7-fbb9-4558-94d5-61c9b2b78743)
-
-<br>
-
+Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, podrás hacerlo con Arduino.
 
 Es tu turno de experimentar con el ESP32 Controller, explora todos los ejemplos y conoce los demás productos de Rocket **Launcher**
