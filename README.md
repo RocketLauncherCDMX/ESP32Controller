@@ -201,7 +201,7 @@ Cada caracter va acompañado de un valor (0 - 10), que indica qué tanto se lade
 
 ```bash
 44-05
-44 → 0x44 = ASCII 68 = D (ATRÄS)
+44 → 0x44 = ASCII 68 = D (ATRAS)
 05 → 0x05 = aproximadamente 50°
 ```
 
@@ -209,23 +209,11 @@ De esta forma puedes utilizar toda esta información para controlar cualquier di
 
 ---
 
-## Código de ejemplo para un dispositivo basado en ESP32
-
-Llegados a este punto, te preguntarás cómo utilizar el control con alguno de tus proyectos, así que a continuación te dejamos el enlace al código de arduino de un ejemplo de aplicación del control, esto para una placa basada en un controlador ESP32, por ejemplo, puede utilizar la placa Tuxedo.
-
-<br>
-
-```bash
-https://github.com/RocketLauncherCDMX/Tuxedo18650
-```
-
-<br>
-
----
-
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
-Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** incluido en la carpeta `examples/BLE_Receiver`.
+Si prefieres emparejar el mando con una placa ESP32 (por ejemplo un robot o coche RC) en lugar de un teléfono, utiliza el sketch **ESP32_BLE_Receiver.ino** que viene incluido en la carpeta `examples/BLE_Receiver` disponible al instalar la biblioteca. También lo puedes encontrar en el siguiente enlace:
+
+
 
 
 
