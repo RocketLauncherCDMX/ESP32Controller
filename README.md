@@ -276,7 +276,7 @@ Ahora configuraremos el control para poder leer sus datos por serial y reprogram
 
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
-1. En el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas. Aquí encontrarás todos los ejemplos, los cuales te enseñarán lo básico sobre cómo se utiliza, por ejemplo, cómo leer botones, Joysticks, activar vibradores (rumble) t manejar wifi y bluetooth.
+1. En el menú **Archivo/Ejemplos** deberá aparecer como opción RocketLauncher_ESP32Controller. Si expandes esa opción, verás más carpetas. Aquí encontrarás todos los ejemplos, los cuales te enseñarán lo básico sobre cómo se utiliza: cómo leer botones, Joysticks, activar vibradores (rumble) y manejar enlances wifi y bluetooth.
 
 2. Selecciona el sketch de ejemplo **bleReceiverESP32.ino** que viene incluido en la carpeta `examples\receiver\bleReceiverESP32`
 
