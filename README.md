@@ -270,7 +270,9 @@ Ahora configuraremos el control para poder leer sus datos por serial y reprogram
 
 7. Si por alguna razón el control está encendido y no se muestra nada en el Serial, prueba apagando y encendiendo de nuevo. Si aún así no aparece el texto, en la parte trasera del control encontrarás un pequeño orificio y debajo un botón. Este botón es el **RESET** y si insertas un pequeño alambre u objeto delgado, podrás presionarlo para que reinicie.
 
-![resetButtonLocation](https://github.com/user-attachments/assets/65e408f4-f6bd-4aaf-a917-d033c06cdb0f)
+<p align="center">
+  <img src="(https://github.com/user-attachments/assets/65e408f4-f6bd-4aaf-a917-d033c06cdb0f" alt="resetButtonLocationESP32Controller" width="600"/>
+</p>
 
 ## Ejemplo – Conectar tu **ESP32 Controller** (Transmisor) con otro ESP32 vía BLE (Receptor)
 
