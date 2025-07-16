@@ -232,7 +232,7 @@ Una vez instalado Arduino, deberás instalar el core del microcontrolador, el cu
 Ya con Arduino, y el core ESP32, es hora de descargar e instalar la biblioteca del ESP32 Controller siguiendo los siguientes pasos:
 
 1. Descarga la librería en el siguiente enlace:
-   https://github.com/RocketLauncherCDMX/ESP32Controller/tree/master/Arduino/examples/receiver/bleReceiverESP32
+[Libreria ESP32 Controller para Arduino](https://github.com/RocketLauncherCDMX/ESP32Controller/blob/master/ESP32Controller.zip)
    
 2. En la pestaña **Programa/Incluir Libreria** dale click a la opción **Añadir biblioteca .ZIP**
    
