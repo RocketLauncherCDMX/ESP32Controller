@@ -293,3 +293,9 @@ Ahora configuraremos el control para poder leer sus datos por serial y reprogram
 ---
 
 Es tu turno de experimentar con el ESP32 Controller, explora todos los ejemplos y conoce los demás productos de Rocket **Launcher**
+
+<br>
+
+<p align="right">
+  <img src="https://github.com/user-attachments/assets/22f18627-fa08-405f-9d04-3672e83b1f30f" alt="Rocket Launcher" width="400"/>
+</p>
